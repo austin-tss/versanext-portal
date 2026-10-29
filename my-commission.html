@@ -10,11 +10,11 @@ input[type=text],input[type=password],input[type=number]{width:100%;padding:11px
 table{width:100%;border-collapse:collapse}td{padding:10px 6px;border-bottom:1px solid #eef1f5}td.v{text-align:right;font-weight:700;color:#0b4fb3}tr.t td{font-size:18px;border-top:2px solid #1e88ff}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.grid{grid-template-columns:1fr}}
 .claw{background:#eef6ff;border-left:4px solid #1e88ff;padding:12px 14px;border-radius:6px;margin-top:14px}
-footer{background:#000;color:#9aa6b4;text-align:center;padding:18px;font-size:13px;margin-top:40px}footer b{color:#fff}ul{line-height:1.7}</style></head><body>
+footer{background:#000;color:#9aa6b4;text-align:center;padding:18px;font-size:13px;margin-top:40px}footer b{color:#fff}ul{line-height:1.7}</style><style>details>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-weight:700;color:#0b4fb3;font-size:18px}details>summary::-webkit-details-marker{display:none}details>summary:after{content:"\25BC";font-size:13px;color:#1e88ff;transition:transform .2s}details[open]>summary:after{transform:rotate(180deg)}details[open]>summary{margin-bottom:10px}</style></head><body>
 <header><img src="logo.png" alt="VNXT"><div class=u>Signed in as <b style="color:#fff">William Griffin</b><a href="index.html" onclick="sessionStorage.removeItem('vnxt')">Sign out</a></div></header>
 <nav><a href="home.html">Home</a><a href="my-commission.html" class=on>My Commission</a><a href="mission.html">Mission</a><a href="process.html">Our Process</a><a href="team.html">Team Roles</a><a href="fees.html">Fee Schedule</a><a href="fielder.html">Fielder Tree Service</a><a href="commission.html">Commission Plan</a><a href="VersaNext-Complete-Packet.pdf" download>Download Packet</a></nav>
 <main><div class=card><h1>My Commission</h1><p class=tag>William Griffin · Sales Rep Commission Plan</p></div>
-<div class=grid><div class=card><h2>Your plan</h2><ul>
+<div class=grid><div class=card style="align-self:start"><details id=plan open><summary>Your commission structure</summary><h2>Your plan</h2><ul>
 <li><b>Signing bonus:</b> 100% of the client's first monthly fee</li>
 <li><b>Deposit commission:</b> 15% of the client's deposit</li>
 <li><b>Monthly residual:</b> 10% of the monthly fee for the first 12 months only. It stops after 12 months, or sooner if the client leaves</li>
@@ -25,7 +25,7 @@ footer{background:#000;color:#9aa6b4;text-align:center;padding:18px;font-size:13
 <li>If a client cancels or doesn't pay within 90 days, the signing bonus and deposit commission come out of your next check</li>
 <li>If you have no upcoming commissions, or you leave VersaNext, you repay it directly</li>
 <li>Residuals already paid are never clawed back</li>
-<li>These terms are part of your signed agreement</li></ul></div>
+<li>These terms are part of your signed agreement</li></ul></details></div>
 <div class=card><h2>Commission calculator</h2><p style="color:#55606e;margin-top:0">One deal at a time. Enter the deal to see what you earn.</p>
 <label>Deposit amount ($)</label><input type=number id=d value=2000 min=0 step=50>
 <label>Monthly cost ($)</label><input type=number id=m value=300 min=0 step=25>

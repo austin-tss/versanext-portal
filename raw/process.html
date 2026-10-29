@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@page{size:Letter;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#1e88ff;--blue2:#1e88ff;--ink:#0B0F19;--muted:#4B5563;--soft:#EAF4FF;--line:#CFE4FF}
+body{font-family:Rubik,sans-serif;font-weight:400;color:var(--ink);background:#FAFBFE;width:8.5in;height:11in;position:relative;overflow:hidden}
+h1,h2,h3,.num{font-family:Poppins,sans-serif}
+.top{height:8px;background:linear-gradient(90deg,#0b4fb3,#1e88ff,#6fd0ff)}
+header{display:flex;align-items:center;justify-content:space-between;padding:.32in .6in .1in}
+header img{height:.8in}
+.eyebrow{font-family:Poppins;font-weight:600;font-size:10pt;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);text-align:right}
+.intro{padding:0 .6in}
+h1{font-size:36pt;font-weight:700;letter-spacing:-.01em;line-height:1.05}
+h1 span{color:var(--blue)}
+.lead{margin-top:8px;font-size:12pt;color:var(--muted);max-width:6.6in;line-height:1.45}
+.flow{position:relative;margin:.32in .6in 0;padding-left:0}
+.flow:before{content:"";position:absolute;left:23px;top:24px;bottom:34px;width:3px;background:linear-gradient(#6fd0ff,#1e88ff,#0b4fb3);border-radius:2px}
+.step{display:flex;align-items:flex-start;gap:20px;margin-bottom:16px;position:relative}
+.num{flex:none;width:49px;height:49px;border-radius:50%;background:linear-gradient(135deg,#0b4fb3,#1e88ff);color:#fff;font-weight:600;font-size:16pt;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 5px #FAFBFE;z-index:1}
+.step:nth-child(even) .num{background:var(--ink)}
+.card{flex:1;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 20px 14px;box-shadow:0 2px 6px rgba(30,136,255,.06)}
+.card h3{font-size:13pt;font-weight:600;display:flex;align-items:center;gap:10px}
+.tag{font-family:Rubik;font-size:8pt;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);background:var(--soft);padding:3px 8px;border-radius:20px}
+.card p{margin-top:3px;font-size:10.5pt;color:var(--muted);line-height:1.4}
+.plans{margin:.12in .6in 0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.plans h2{grid-column:1/-1;font-size:13pt;font-weight:600}
+.plan{border-radius:12px;padding:13px 18px;font-size:10.5pt;line-height:1.4}
+.plan b{display:block;font-family:Poppins;font-weight:600;font-size:11pt;margin-bottom:3px}
+.plan.hi{background:#0b4fb3;color:#fff}
+.plan.hi span{color:#D2E7FF}
+.plan.std{background:#fff;border:1px solid var(--line);color:var(--muted)}
+.plan.std b{color:var(--ink)}
+footer{position:absolute;left:0;right:0;bottom:0;background:var(--ink);color:#fff;padding:.2in .6in;display:flex;justify-content:space-between;align-items:center;font-size:9.5pt}
+footer .brand{font-family:Poppins;font-weight:600;font-size:11pt}
+footer .brand span{color:#1e88ff}
+footer .r{color:#C9CED6}
+.note{display:block;margin-top:5px;font-size:9.5pt;color:#1e88ff;font-weight:500}
+</style></head><body>
+<div class="top"></div>
+<header style="background:#000;padding:.25in .6in;margin:0 0 6px"><img src="../logo.png" style="height:1in"><div class="eyebrow">How we work</div></header><div style="height:5px;background:linear-gradient(90deg,#0b4fb3,#1e88ff,#6fd0ff)"></div>
+<section class="intro">
+<h1 style="font-size:34pt">Our <span>Process</span></h1>
+<p class="lead"><strong style="color:#0B0F19;font-family:Poppins;font-weight:600">Your virtual employee, built around your business.</strong><br>From first demo to long-term support, here is how we bring your new team member on board.</p>
+</section>
+<div class="flow">
+<div class="step"><div class="num">1</div><div class="card"><h3>See It First <span class="tag">Demo</span></h3><p>We show you a base-level version of your virtual employee, so you can see it at work before you commit.</p></div></div>
+<div class="step"><div class="num">2</div><div class="card"><h3>Choose Your Package <span class="tag">Agree</span></h3><p>Together we agree on the package that best fits your business and goals.</p></div></div>
+<div class="step"><div class="num">3</div><div class="card"><h3>Custom Build &amp; Onboard <span class="tag">Month 1</span></h3><p>One month building a custom solution designed around your business, your workflows, and your team, with our support team by your side. <strong style="color:#1e88ff;font-weight:500">No off-the-shelf software. Built for you.</strong></p></div></div>
+<div class="step"><div class="num">4</div><div class="card"><h3>Refine &amp; Perfect <span class="tag">Included</span></h3><p>Your first month of edits and changes is included, so it works the way your team works.</p></div></div>
+<div class="step"><div class="num">5</div><div class="card"><h3>24/7 Support &amp; Hosting <span class="tag" style="background:#0b4fb3;color:#fff">24/7</span> <span class="tag">Monthly</span></h3><p>Your virtual employee stays on the job alongside your team, with around-the-clock 24/7 support plus hosting, all for a monthly fee.<span class="note">Changes beyond the first month are billed hourly, unless you choose our higher-tier plan with ongoing support and changes included.</span></p></div></div>
+<div class="step"><div class="num">6</div><div class="card"><h3>Your Account Manager / Developer <span class="tag">Your Contact</span></h3><p>One trusted point of contact who knows your business, takes your requests, and builds what you need.</p></div></div>
+</div>
+<footer><div class="brand">Versa<span>Next</span></div><div class="r">A division of Tech Sourced Solutions &nbsp;|&nbsp; techsourcedsolutions.com</div></footer>
+</body></html>

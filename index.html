@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content=noindex><title>Sign in · VersaNext</title><style>*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#f4f6f9;color:#0d1117}
+header{background:#000;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid;border-image:linear-gradient(90deg,#0b4fb3,#1e88ff,#6fd0ff) 1}
+header img{height:46px}header .u{color:#cfd8e3;font-size:14px}header a{color:#6fd0ff;text-decoration:none;margin-left:14px}
+nav{background:#0a0d12;display:flex;flex-wrap:wrap;padding:0 20px}nav a{color:#cfd8e3;text-decoration:none;padding:12px 14px;font-size:14px}nav a.on,nav a:hover{color:#fff;box-shadow:inset 0 -3px #1e88ff}
+main{max-width:1000px;margin:28px auto;padding:0 20px}.card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin-bottom:20px}
+h1{margin:0 0 6px;font-size:26px}h2{color:#0b4fb3;font-size:18px;margin:0 0 10px}.tag{color:#55606e;margin:0 0 20px}.tag b{color:#1e88ff;font-style:italic}
+.btn{background:linear-gradient(90deg,#0b4fb3,#1e88ff);color:#fff;border:0;border-radius:8px;padding:12px 20px;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block}
+iframe{width:100%;height:1150px;border:0;background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+input[type=text],input[type=password],input[type=number]{width:100%;padding:11px;border:1px solid #cfd6df;border-radius:8px;font-size:15px;margin:6px 0 14px}
+table{width:100%;border-collapse:collapse}td{padding:10px 6px;border-bottom:1px solid #eef1f5}td.v{text-align:right;font-weight:700;color:#0b4fb3}tr.t td{font-size:18px;border-top:2px solid #1e88ff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.claw{background:#eef6ff;border-left:4px solid #1e88ff;padding:12px 14px;border-radius:6px;margin-top:14px}
+footer{background:#000;color:#9aa6b4;text-align:center;padding:18px;font-size:13px;margin-top:40px}footer b{color:#fff}ul{line-height:1.7}</style></head><body>
+<header><img src="logo.png" alt="VNXT"></header>
+
+<main><div class=card style="max-width:420px;margin:40px auto"><h1>Employee Portal</h1><p class=tag>Versatile technology solutions to take your organization to the <b>next level.</b></p>
+<p id=err style="color:#c62828"></p><form id=f><label>Username</label><input type=text name=u autocomplete=username required><label>Password</label><input type=password name=p autocomplete=current-password required><button class=btn style="width:100%">Sign in</button></form></div></main><footer><b>VersaNext</b> · Versatile technology solutions to take your organization to the next level.<br>A division of Tech Sourced Solutions</footer><script>document.getElementById('f').onsubmit=async e=>{e.preventDefault();const u=e.target.u.value.trim().toLowerCase().replace(/\s+/g,' ');
+const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(u+'|'+e.target.p.value));const h=[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
+if(h==='76a1bbb21e1356dd39db6b7477ef1f8bc2da9c510abae68ceacccf5f2cf01db4'){sessionStorage.setItem('vnxt',u);location.href='my-commission.html';}else document.getElementById('err').textContent='Incorrect username or password.';};</script></body></html>

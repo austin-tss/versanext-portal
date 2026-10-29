@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset=utf-8><script>if(sessionStorage.getItem('vnxt')!=='william griffin')location.replace('index.html');</script><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content=noindex><title>My Commission · VersaNext</title><style>*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#f4f6f9;color:#0d1117}
+header{background:#000;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid;border-image:linear-gradient(90deg,#0b4fb3,#1e88ff,#6fd0ff) 1}
+header img{height:46px}header .u{color:#cfd8e3;font-size:14px}header a{color:#6fd0ff;text-decoration:none;margin-left:14px}
+nav{background:#0a0d12;display:flex;flex-wrap:wrap;padding:0 20px}nav a{color:#cfd8e3;text-decoration:none;padding:12px 14px;font-size:14px}nav a.on,nav a:hover{color:#fff;box-shadow:inset 0 -3px #1e88ff}
+main{max-width:1000px;margin:28px auto;padding:0 20px}.card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin-bottom:20px}
+h1{margin:0 0 6px;font-size:26px}h2{color:#0b4fb3;font-size:18px;margin:0 0 10px}.tag{color:#55606e;margin:0 0 20px}.tag b{color:#1e88ff;font-style:italic}
+.btn{background:linear-gradient(90deg,#0b4fb3,#1e88ff);color:#fff;border:0;border-radius:8px;padding:12px 20px;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block}
+iframe{width:100%;height:1150px;border:0;background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+input[type=text],input[type=password],input[type=number]{width:100%;padding:11px;border:1px solid #cfd6df;border-radius:8px;font-size:15px;margin:6px 0 14px}
+table{width:100%;border-collapse:collapse}td{padding:10px 6px;border-bottom:1px solid #eef1f5}td.v{text-align:right;font-weight:700;color:#0b4fb3}tr.t td{font-size:18px;border-top:2px solid #1e88ff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.claw{background:#eef6ff;border-left:4px solid #1e88ff;padding:12px 14px;border-radius:6px;margin-top:14px}
+footer{background:#000;color:#9aa6b4;text-align:center;padding:18px;font-size:13px;margin-top:40px}footer b{color:#fff}ul{line-height:1.7}</style></head><body>
+<header><img src="logo.png" alt="VNXT"><div class=u>Signed in as <b style="color:#fff">William Griffin</b><a href="index.html" onclick="sessionStorage.removeItem('vnxt')">Sign out</a></div></header>
+<nav><a href="home.html">Home</a><a href="my-commission.html" class=on>My Commission</a><a href="mission.html">Mission</a><a href="process.html">Our Process</a><a href="team.html">Team Roles</a><a href="fees.html">Fee Schedule</a><a href="fielder.html">Fielder Tree Service</a><a href="commission.html">Commission Plan</a><a href="VersaNext-Complete-Packet.pdf" download>Download Packet</a></nav>
+<main><div class=card><h1>My Commission</h1><p class=tag>William Griffin · Sales Rep Commission Plan</p></div>
+<div class=grid><div class=card><h2>Your plan</h2><ul>
+<li><b>Signing bonus:</b> 100% of the client's first monthly fee</li>
+<li><b>Deposit commission:</b> 15% of the client's deposit</li>
+<li><b>Monthly residual:</b> 10% of the monthly fee for the first 12 months only. It stops after 12 months, or sooner if the client leaves</li>
+<li><b>Build &amp; add-on fees:</b> 10% of any other one-time fees</li>
+<li><b>Quarterly accelerator:</b> sign 5+ new clients in a quarter and the residual rises to 15% on those deals</li>
+<li><b>When you're paid:</b> monthly, after the client's payment clears</li></ul>
+<h2>90-day clawback</h2><ul>
+<li>If a client cancels or doesn't pay within 90 days, the signing bonus and deposit commission come out of your next check</li>
+<li>If you have no upcoming commissions, or you leave VersaNext, you repay it directly</li>
+<li>Residuals already paid are never clawed back</li>
+<li>These terms are part of your signed agreement</li></ul></div>
+<div class=card><h2>Commission calculator</h2><p style="color:#55606e;margin-top:0">One deal at a time. Enter the deal to see what you earn.</p>
+<label>Deposit amount ($)</label><input type=number id=d value=2000 min=0 step=50>
+<label>Monthly cost ($)</label><input type=number id=m value=300 min=0 step=25>
+<label style="display:block;margin:0 0 14px;font-weight:600"><input type=checkbox id=x style="transform:scale(1.3);margin-right:8px">With multiplier <span style="font-weight:400;color:#55606e">(15% residual)</span></label>
+<table><tr><td>Signing bonus (first month)</td><td class=v id=sb></td></tr><tr><td>Deposit commission (15%)</td><td class=v id=dc></td></tr>
+<tr><td>Monthly residual (<span id=rp>10</span>%/mo)</td><td class=v id=rm></td></tr><tr><td>Residual, 12-month total</td><td class=v id=rt></td></tr>
+<tr class=t><td><b>Year-one total</b></td><td class=v id=yt></td></tr></table>
+<div class=claw id=cl></div></div></div>
+<script>const f=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:n%1?2:0,maximumFractionDigits:2});
+function c(){const d=Math.max(0,+document.getElementById('d').value||0),m=Math.max(0,+document.getElementById('m').value||0),r=document.getElementById('x').checked?.15:.10;
+const sb=m,dc=d*.15,rm=m*r,rt=rm*12;const S=(i,v)=>document.getElementById(i).textContent=f(Math.round(v*100)/100);
+S('sb',sb);S('dc',dc);S('rm',rm);S('rt',rt);S('yt',sb+dc+rt);document.getElementById('rp').textContent=r*100;
+document.getElementById('cl').textContent='If the client leaves within 90 days, '+f(Math.round((sb+dc)*100)/100)+' (signing bonus + deposit commission) comes back out of your next check.';}
+['d','m','x'].forEach(i=>document.getElementById(i).addEventListener('input',c));c();</script></main><footer><b>VersaNext</b> · Versatile technology solutions to take your organization to the next level.<br>A division of Tech Sourced Solutions</footer></body></html>
